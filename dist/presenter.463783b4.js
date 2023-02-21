@@ -126,10 +126,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 function saludar(genero, edad) {
   var pronom = "";
-  if (genero === "Masculino" && edad > 30) {
-    pronom = "Sr.";
-  } else if (genero === "Femenino" && edad > 30) {
-    pronom = "Sra.";
+  if (genero === "Male" && edad > 30) {
+    pronom = "Mr.";
+  } else if (genero === "Female" && edad > 30) {
+    pronom = "Mrs.";
   }
   return pronom;
 }
@@ -147,11 +147,11 @@ function saludarHora() {
   var horaActual = fechaActual.getHours();
   var horaDia = "";
   if (horaActual >= 6 && horaActual < 12) {
-    horaDia = "Buenos dias";
+    horaDia = "Good Morning";
   } else if (horaActual > 12 && horaActual < 19) {
-    horaDia = "Buenas Tardes";
+    horaDia = "Good afternoon";
   } else {
-    horaDia = "Buenas noches";
+    horaDia = "Good evening";
   }
   return horaDia;
 }
@@ -198,7 +198,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55162" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55230" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -1,9 +1,9 @@
 function saludar(genero, edad) {
     var pronom = "";
-    if (genero === "Masculino" && edad > 30) {
-        pronom = "Sr.";
-      } else if (genero === "Femenino" && edad > 30) {
-        pronom = "Sra.";
+    if (genero === "Male" && edad > 30) {
+        pronom = "Mr.";
+      } else if (genero === "Female" && edad > 30) {
+        pronom = "Mrs.";
       }
     return pronom;
   }
