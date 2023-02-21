@@ -1,17 +1,16 @@
+import saludar from "./saludoXedad";
+import saludarHora from "./saludarXhora";
+
 const first = document.querySelector("#nombre");
 const second = document.querySelector("#genero");
+const edad = document.querySelector("#edad");
 const form = document.querySelector("#saludar-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const name = first.value;
-  var gender;
-  if (second.value === "Masculino") {
-    gender = "Sr."
-  } else {
-    gender = "Sra."
-  }
-  div.innerHTML = "<p>" + "Hola " + gender +" " + name + "</p>";
+  
+  div.innerHTML = "<p>" +  saludarHora() + " " + saludar(second.value, edad.value) + name + "</p>";
 
 });
